@@ -1472,6 +1472,8 @@
       const link = paper.el.querySelector('.paper-meta a');
       if (link && paper.doi) {
         link.setAttribute('href', 'https://doi.org/' + paper.doi);
+        link.setAttribute('target', '_blank');
+        link.setAttribute('rel', 'noopener');
         const textNode = link.childNodes[link.childNodes.length - 1];
         if (textNode && textNode.nodeType === Node.TEXT_NODE) {
           textNode.textContent = ' ' + paper.doi;
