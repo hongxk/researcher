@@ -19,14 +19,14 @@ python -m http.server 8000
 
 ## 发布到 GitHub Pages
 
-1. 登录 GitHub，新建仓库，例如 `researcher-homepage`，选择 Public。
+1. 登录 GitHub，新建仓库，例如 `researcher`，选择 Public。
 2. 在仓库页面点击 `uploading an existing file`，上传 `index.html` 和 `README.md`。
 3. 进入 `Settings` → `Pages`。
 4. `Source` 选择 `Deploy from a branch`，分支选 `main`，目录选 `/ (root)`，保存。
 5. 等待 1-2 分钟，访问：
 
 ```text
-https://你的用户名.github.io/researcher-homepage/
+https://你的用户名.github.io/researcher/
 ```
 
 ## 修改个人信息
