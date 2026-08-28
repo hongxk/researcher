@@ -615,6 +615,13 @@
     }
     .paper-title { margin: 0 0 6px; font-size: 15px; font-weight: 700; line-height: 1.45; }
     .paper-authors { margin: 0 0 4px; color: var(--muted); font-size: 13px; }
+    .paper-authors .self-author {
+      color: #9a3412;
+      font-weight: 700;
+      background: #ffe3b3;
+      border-radius: 3px;
+      padding: 0 2px;
+    }
     .paper-venue { margin: 0 0 10px; color: var(--muted); font-size: 13px; }
     .paper-meta { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
     .badge {
@@ -624,6 +631,14 @@
       font-weight: 600;
     }
     .badge-if { background: #e8eefb; color: #1d4ed8; }
+    .badge-if-high { background: #fdeaea; color: #b42318; border: 1px solid #f5c1bc; }
+    .badge-if-mid { background: #fdf0dc; color: #b45309; border: 1px solid #f3d8a8; }
+    .badge-if-low { background: #e2f3ec; color: #0e7c6b; border: 1px solid #b9e3d7; }
+    .badge-jcr { background: #eef2f4; color: #5d6b76; }
+    .badge-jcr-q1 { background: #e8eefb; color: #1d4ed8; border: 1px solid #c3d6f5; }
+    .badge-jcr-q2 { background: #e2f3ec; color: #0e7c6b; border: 1px solid #b9e3d7; }
+    .badge-jcr-q3 { background: #fdf0dc; color: #b45309; border: 1px solid #f3d8a8; }
+    .badge-jcr-q4 { background: #fdeaea; color: #b42318; border: 1px solid #f5c1bc; }
     .badge-cites { background: #e8f5f0; color: #0e7c6b; }
     .badge-loading { background: #eef2f4; color: #5d6b76; }
     .badge-error { background: #fdeaea; color: #b42318; }
@@ -926,7 +941,7 @@
            data-doi 填写论文 DOI，页面会从 OpenAlex 自动获取引用量。
            data-if 为影响因子权威值，OpenAlex 不会覆盖。 -->
       <ul class="paper-list" id="paperList">
-        <li class="paper" data-type="journal" data-if="10.6" data-doi="10.1016/j.jhazmat.2026.143008">
+        <li class="paper" data-type="journal" data-if="10.6" data-jcr="1" data-doi="10.1016/j.jhazmat.2026.143008">
           <div class="paper-year">2026</div>
           <div class="paper-main">
             <p class="paper-title">Fumarate-Based Copolyesters with Long-Term Stability and Temperature-Gated Enzymatic Degradation.</p>
@@ -941,7 +956,7 @@
             </div>
           </div>
         </li>
-        <li class="paper" data-type="journal" data-if="7.9" data-doi="10.1016/j.ijpx.2026.100509">
+        <li class="paper" data-type="journal" data-if="7.9" data-jcr="1" data-doi="10.1016/j.ijpx.2026.100509">
           <div class="paper-year">2026</div>
           <div class="paper-main">
             <p class="paper-title">Enhanced brain delivery of oleanolic acid by GSH-PEGylated liposomes and its amelioration of scopolamine-induced cognitive dysfunction via multi-target regulation.</p>
@@ -956,7 +971,7 @@
             </div>
           </div>
         </li>
-        <li class="paper" data-type="journal" data-if="8.7" data-doi="10.1016/j.ijbiomac.2025.149193">
+        <li class="paper" data-type="journal" data-if="8.7" data-jcr="1" data-doi="10.1016/j.ijbiomac.2025.149193">
           <div class="paper-year">2026</div>
           <div class="paper-main">
             <p class="paper-title">Stereoselective synthesis of (S)-3-Hydroxy-3-phenylpropionate with a novel carbonyl reductase identified from a soda lake metagenome.</p>
@@ -971,7 +986,7 @@
             </div>
           </div>
         </li>
-        <li class="paper" data-type="journal" data-if="6.9" data-doi="10.1038/s42004-025-01773-y">
+        <li class="paper" data-type="journal" data-if="6.9" data-jcr="1" data-doi="10.1038/s42004-025-01773-y">
           <div class="paper-year">2025</div>
           <div class="paper-main">
             <p class="paper-title">Deep learning model of post-translational modification regulating liquid-liquid phase separation.</p>
@@ -986,7 +1001,7 @@
             </div>
           </div>
         </li>
-        <li class="paper" data-type="journal" data-if="5.8" data-doi="10.1038/s42003-025-08875-2">
+        <li class="paper" data-type="journal" data-if="5.8" data-jcr="1" data-doi="10.1038/s42003-025-08875-2">
           <div class="paper-year">2025</div>
           <div class="paper-main">
             <p class="paper-title">DynaRNA: accurate dynamic RNA conformation ensemble generation with diffusion model.</p>
@@ -1001,7 +1016,7 @@
             </div>
           </div>
         </li>
-        <li class="paper" data-type="journal" data-if="2.1" data-doi="10.1093/cz/zoaf067">
+        <li class="paper" data-type="journal" data-if="2.1" data-jcr="1" data-doi="10.1093/cz/zoaf067">
           <div class="paper-year">2025</div>
           <div class="paper-main">
             <p class="paper-title">Cell Cycle of Trypanosoma epinepheli bloodstream forms in vivo and in vitro.</p>
@@ -1016,7 +1031,7 @@
             </div>
           </div>
         </li>
-        <li class="paper" data-type="journal" data-if="14.1" data-doi="10.1002/advs.202511636">
+        <li class="paper" data-type="journal" data-if="14.1" data-jcr="1" data-doi="10.1002/advs.202511636">
           <div class="paper-year">2025</div>
           <div class="paper-main">
             <p class="paper-title">Accurate Generation of Conformational Ensembles for Intrinsically Disordered Proteins with IDPFold.</p>
@@ -1031,7 +1046,7 @@
             </div>
           </div>
         </li>
-        <li class="paper" data-type="journal" data-if="12.5" data-doi="10.1016/j.cej.2025.169264">
+        <li class="paper" data-type="journal" data-if="12.5" data-jcr="1" data-doi="10.1016/j.cej.2025.169264">
           <div class="paper-year">2025</div>
           <div class="paper-main">
             <p class="paper-title">Cell membrane-inspired controllably degradable polyesters: High barrier and tailored oxidation responsiveness.</p>
@@ -1046,7 +1061,7 @@
             </div>
           </div>
         </li>
-        <li class="paper" data-type="journal" data-if="14.1" data-doi="10.1002/advs.202507044">
+        <li class="paper" data-type="journal" data-if="14.1" data-jcr="1" data-doi="10.1002/advs.202507044">
           <div class="paper-year">2025</div>
           <div class="paper-main">
             <p class="paper-title">AI-Driven De Novo Design of Ultra Long-Acting GLP-1 Receptor Agonists.</p>
@@ -1061,7 +1076,7 @@
             </div>
           </div>
         </li>
-        <li class="paper" data-type="journal" data-if="10.6" data-doi="10.1039/d4gc06604a">
+        <li class="paper" data-type="journal" data-if="10.6" data-jcr="1" data-doi="10.1039/d4gc06604a">
           <div class="paper-year">2025</div>
           <div class="paper-main">
             <p class="paper-title">Design of environmentally degradable polyethylene-like polyesters and eco-friendly recycling via commercial enzymes.</p>
@@ -1076,7 +1091,7 @@
             </div>
           </div>
         </li>
-        <li class="paper" data-type="journal" data-if="8.7" data-doi="10.1016/j.ijbiomac.2024.136256">
+        <li class="paper" data-type="journal" data-if="8.7" data-jcr="1" data-doi="10.1016/j.ijbiomac.2024.136256">
           <div class="paper-year">2024</div>
           <div class="paper-main">
             <p class="paper-title">Drude2019IDPC polarizable force field reveals structure-function relationship of insulin.</p>
@@ -1091,7 +1106,7 @@
             </div>
           </div>
         </li>
-        <li class="paper" data-type="journal" data-if="5.8" data-doi="10.1021/acs.jctc.4c00497">
+        <li class="paper" data-type="journal" data-if="5.8" data-jcr="1" data-doi="10.1021/acs.jctc.4c00497">
           <div class="paper-year">2024</div>
           <div class="paper-main">
             <p class="paper-title">Excited-Ground State Transition of RNA Strand Slippage Mechanism Captured by Base-specific Force Field.</p>
@@ -1106,7 +1121,7 @@
             </div>
           </div>
         </li>
-        <li class="paper" data-type="journal" data-if="8.7" data-doi="10.1016/j.ijbiomac.2024.133229">
+        <li class="paper" data-type="journal" data-if="8.7" data-jcr="1" data-doi="10.1016/j.ijbiomac.2024.133229">
           <div class="paper-year">2024</div>
           <div class="paper-main">
             <p class="paper-title">Single-cell enzymatic cascade synthesis of testolactone enabled by engineering of polycyclic ketone monooxygenase and multi-gene expression fine-tuning.</p>
@@ -1121,7 +1136,7 @@
             </div>
           </div>
         </li>
-        <li class="paper" data-type="journal" data-if="6.5" data-doi="10.1186/s13578-024-01261-1">
+        <li class="paper" data-type="journal" data-if="6.5" data-jcr="1" data-doi="10.1186/s13578-024-01261-1">
           <div class="paper-year">2024</div>
           <div class="paper-main">
             <p class="paper-title">Reproductive chemical database: a curated database of chemicals that modulate protein targets regulating important reproductive biological processes.</p>
@@ -1136,7 +1151,7 @@
             </div>
           </div>
         </li>
-        <li class="paper" data-type="journal" data-if="6.4" data-doi="10.1021/acs.jcim.4c00289">
+        <li class="paper" data-type="journal" data-if="6.4" data-jcr="1" data-doi="10.1021/acs.jcim.4c00289">
           <div class="paper-year">2024</div>
           <div class="paper-main">
             <p class="paper-title">Early Aggregation Mechanism of SOD128-38 Based on Force Field Parameter of 5-Cyano-Tryptophan.</p>
@@ -1151,7 +1166,7 @@
             </div>
           </div>
         </li>
-        <li class="paper" data-type="journal" data-if="4.7" data-doi="10.1007/s00253-023-12747-2">
+        <li class="paper" data-type="journal" data-if="4.7" data-jcr="2" data-doi="10.1007/s00253-023-12747-2">
           <div class="paper-year">2023</div>
           <div class="paper-main">
             <p class="paper-title">Multiplex metabolic pathway engineering of Monascus pilosus enhances lovastatin production.</p>
@@ -1166,7 +1181,7 @@
             </div>
           </div>
         </li>
-        <li class="paper" data-type="journal" data-if="1.9" data-doi="10.1007/s10930-023-10142-4">
+        <li class="paper" data-type="journal" data-if="1.9" data-jcr="4" data-doi="10.1007/s10930-023-10142-4">
           <div class="paper-year">2023</div>
           <div class="paper-main">
             <p class="paper-title">Improved antimicrobial activity of bovine lactoferrin peptide (LFcinB) based on rational design.</p>
@@ -1181,7 +1196,7 @@
             </div>
           </div>
         </li>
-        <li class="paper" data-type="journal" data-if="8.7" data-doi="10.1016/j.ijbiomac.2023.125233">
+        <li class="paper" data-type="journal" data-if="8.7" data-jcr="1" data-doi="10.1016/j.ijbiomac.2023.125233">
           <div class="paper-year">2023</div>
           <div class="paper-main">
             <p class="paper-title">Sequence-based Machine Learning Method for Predicting the Effects of Phosphorylation on Protein-Protein Interactions.</p>
@@ -1196,7 +1211,7 @@
             </div>
           </div>
         </li>
-        <li class="paper" data-type="journal" data-if="5.3" data-doi="10.1007/s00299-023-03006-9">
+        <li class="paper" data-type="journal" data-if="5.3" data-jcr="1" data-doi="10.1007/s00299-023-03006-9">
           <div class="paper-year">2023</div>
           <div class="paper-main">
             <p class="paper-title">Identification and validation of new MADS-box homologous genes in 3010 rice pan-genome.</p>
@@ -1211,7 +1226,7 @@
             </div>
           </div>
         </li>
-        <li class="paper" data-type="journal" data-if="6.4" data-doi="10.1021/acs.jcim.2c01177">
+        <li class="paper" data-type="journal" data-if="6.4" data-jcr="1" data-doi="10.1021/acs.jcim.2c01177">
           <div class="paper-year">2023</div>
           <div class="paper-main">
             <p class="paper-title">Phosphorylation Regulation Mechanism of β2 Integrin for the Binding of Filamin Revealed by Markov State Model.</p>
@@ -1226,7 +1241,7 @@
             </div>
           </div>
         </li>
-        <li class="paper" data-type="journal" data-if="5.5" data-doi="10.1093/bioinformatics/btac823">
+        <li class="paper" data-type="journal" data-if="5.5" data-jcr="1" data-doi="10.1093/bioinformatics/btac823">
           <div class="paper-year">2023</div>
           <div class="paper-main">
             <p class="paper-title">PTMint database of experimentally verified PTM regulation on protein–protein interaction.</p>
@@ -1241,7 +1256,7 @@
             </div>
           </div>
         </li>
-        <li class="paper" data-type="journal" data-if="5.6" data-doi="10.3390/ijms21186727">
+        <li class="paper" data-type="journal" data-if="5.6" data-jcr="1" data-doi="10.3390/ijms21186727">
           <div class="paper-year">2020</div>
           <div class="paper-main">
             <p class="paper-title">Databases and Bioinformatic Tools for Glycobiology and Glycoproteomics.</p>
@@ -1256,7 +1271,7 @@
             </div>
           </div>
         </li>
-        <li class="paper" data-type="journal" data-if="1.8" data-doi="10.1016/j.exppara.2017.12.005">
+        <li class="paper" data-type="journal" data-if="1.8" data-jcr="3" data-doi="10.1016/j.exppara.2017.12.005">
           <div class="paper-year">2018</div>
           <div class="paper-main">
             <p class="paper-title">The effect of normal human serum on mouse trypanosome Trypanosoma musculi in vitro and in vivo.</p>
@@ -1271,7 +1286,7 @@
             </div>
           </div>
         </li>
-        <li class="paper" data-type="journal" data-if="2.6" data-doi="10.1016/j.actatropica.2017.04.007">
+        <li class="paper" data-type="journal" data-if="2.6" data-jcr="2" data-doi="10.1016/j.actatropica.2017.04.007">
           <div class="paper-year">2017</div>
           <div class="paper-main">
             <p class="paper-title">PCR-based identification of Trypanosoma lewisi and Trypanosoma musculi using maxicircle kinetoplast DNA.</p>
@@ -1286,7 +1301,7 @@
             </div>
           </div>
         </li>
-        <li class="paper" data-type="journal" data-if="1.6" data-doi="10.1093/trstmh/trv100">
+        <li class="paper" data-type="journal" data-if="1.6" data-jcr="3" data-doi="10.1093/trstmh/trv100">
           <div class="paper-year">2016</div>
           <div class="paper-main">
             <p class="paper-title">Current status of Clonorchis sinensis and clonorchiasis in China.</p>
@@ -1376,6 +1391,52 @@
       return Number(value).toFixed(2).replace(/\.?0+$/, '');
     }
 
+    function renderJCRBadge(paper) {
+      const container = paper.el.querySelector('.paper-stats');
+      if (!container) return;
+      const zone = paper.el.dataset.jcr;
+      let badge = container.querySelector('.badge-jcr');
+      if (!zone) {
+        if (badge) badge.remove();
+        return;
+      }
+      if (!badge) {
+        badge = document.createElement('span');
+        badge.className = 'badge badge-jcr';
+        const ifBadge = container.querySelector('.badge-if');
+        if (ifBadge && ifBadge.nextSibling) container.insertBefore(badge, ifBadge.nextSibling);
+        else container.appendChild(badge);
+      }
+      badge.classList.remove('badge-jcr-q1', 'badge-jcr-q2', 'badge-jcr-q3', 'badge-jcr-q4');
+      badge.classList.add('badge-jcr-q' + zone);
+      badge.textContent = 'JCR ' + zone + '区';
+    }
+
+    function highlightSelfAuthors() {
+      document.querySelectorAll('.paper-authors').forEach((el) => {
+        el.querySelectorAll('.self-author').forEach((node) => node.replaceWith(document.createTextNode(node.textContent)));
+        const walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
+        const nodes = [];
+        while (walker.nextNode()) nodes.push(walker.currentNode);
+        nodes.forEach((node) => {
+          const parts = node.nodeValue.split(/(Hong XK?(?=[, *#]|$))/g);
+          if (parts.length === 1) return;
+          const frag = document.createDocumentFragment();
+          parts.forEach((part) => {
+            if (/^Hong XK?(?=[, *#]|$)/.test(part)) {
+              const strong = document.createElement('strong');
+              strong.className = 'self-author';
+              strong.textContent = part;
+              frag.appendChild(strong);
+            } else {
+              frag.appendChild(document.createTextNode(part));
+            }
+          });
+          node.parentNode.replaceChild(frag, node);
+        });
+      });
+    }
+
     function renderPaper(paper) {
       const container = paper.el.querySelector('.paper-stats');
       if (!container) return;
@@ -1384,7 +1445,8 @@
       const ifValue = ifBadge.querySelector('.stat-value');
       const citesValue = citesBadge.querySelector('.stat-value');
 
-      ifBadge.className = 'badge badge-if';
+      const ifLevel = paper.if === null || paper.if === undefined ? '' : paper.if >= 10 ? ' badge-if-high' : paper.if >= 5 ? ' badge-if-mid' : ' badge-if-low';
+      ifBadge.className = 'badge badge-if' + ifLevel;
       citesBadge.className = 'badge badge-cites';
 
       if (paper.state === 'loading') {
@@ -1423,6 +1485,7 @@
       } else {
         delete paper.el.dataset.citations;
       }
+      renderJCRBadge(paper);
     }
 
     async function fetchPaper(paper) {
@@ -1513,6 +1576,7 @@
       }
       renderPaper(paper);
     });
+    highlightSelfAuthors();
     updateSummary();
     fetchAll(false);
 
