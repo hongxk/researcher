@@ -659,6 +659,50 @@
     .paper-meta a { font-size: 13px; font-weight: 600; }
     .paper-stats { margin-left: auto; display: flex; gap: 8px; flex-wrap: wrap; }
 
+    /* ---------- 合作单位 ---------- */
+    .partner-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+    .partner-card {
+      padding: 12px 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      text-align: center;
+      text-decoration: none;
+      color: inherit;
+      cursor: pointer;
+      transition: transform 0.15s ease;
+    }
+    .partner-card:hover {
+      transform: translateY(-3px);
+      text-decoration: none;
+      background: #fdeedb;
+      border-radius: 12px;
+      box-shadow: 0 10px 22px rgba(15, 23, 42, 0.08);
+    }
+    .partner-card img {
+      width: 180px;
+      max-width: 100%;
+      height: 96px;
+      object-fit: contain;
+      display: block;
+    }
+    .partner-card h3 { margin: 0; font-size: 16px; font-weight: 700; line-height: 1.4; }
+    .partner-type {
+      display: inline-block;
+      padding: 3px 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 1.4;
+    }
+    .partner-type-school { background: #eaf1fc; color: #1d4ed8; border: 1px solid #c9d9f5; }
+    .partner-type-hospital { background: #e7f6f2; color: #0e7c6b; border: 1px solid #bfe3da; }
+
     @media (max-width: 860px) {
       .header-inner { align-items: flex-start; flex-direction: column; padding: 8px 0; }
       .site-header { height: auto; }
@@ -678,6 +722,8 @@
       .paper-stats { margin-left: 0; }
       .pub-actions { margin-left: 0; width: 100%; }
       .pub-summary { gap: 12px; }
+      .partner-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+      .partner-card img { width: 140px; height: 80px; }
     }
   </style>
 </head>
@@ -693,6 +739,7 @@
         <button class="tab" data-tab="tools" type="button">生信工具</button>
         <button class="tab" data-tab="projects" type="button">科研项目</button>
         <button class="tab" data-tab="publications" type="button">学术论文</button>
+        <button class="tab" data-tab="partners" type="button">合作单位</button>
       </nav>
     </div>
   </header>
@@ -1318,6 +1365,43 @@
         </li>
         </ul>
         </div>
+      </div>
+    </section>
+
+    <!-- ========== 合作单位 ========== -->
+    <section class="tab-panel" id="panel-partners" data-panel="partners" hidden>
+      <div class="section-head"><h2>合作单位</h2><span>Partners</span></div>
+      <div class="partner-grid">
+        <a class="partner-card" href="https://www.fzu.edu.cn/" target="_blank" rel="noopener">
+          <img src="images/fzu.png" alt="福州大学">
+          <h3>福州大学</h3>
+          <span class="partner-type partner-type-school">大学</span>
+        </a>
+        <a class="partner-card" href="https://www.fjsl.com.cn/" target="_blank" rel="noopener">
+          <img src="images/sl.png" alt="福州大学附属省立医院">
+          <h3>福州大学附属省立医院</h3>
+          <span class="partner-type partner-type-hospital">附属医院</span>
+        </a>
+        <a class="partner-card" href="https://www.fyyy.com/" target="_blank" rel="noopener">
+          <img src="images/fyyy.png" alt="福建医科大学附属第一医院">
+          <h3>福建医科大学附属第一医院</h3>
+          <span class="partner-type partner-type-hospital">附属医院</span>
+        </a>
+        <a class="partner-card" href="https://www.fjkqyy.com/" target="_blank" rel="noopener">
+          <img src="images/kqyy.png" alt="福建医科大学附属口腔医院">
+          <h3>福建医科大学附属口腔医院</h3>
+          <span class="partner-type partner-type-hospital">附属医院</span>
+        </a>
+        <a class="partner-card" href="https://www.sysu.edu.cn/" target="_blank" rel="noopener">
+          <img src="images/sysu.png" alt="中山大学">
+          <h3>中山大学</h3>
+          <span class="partner-type partner-type-school">大学</span>
+        </a>
+        <a class="partner-card" href="https://www.sjtu.edu.cn/" target="_blank" rel="noopener">
+          <img src="images/sjtu.png" alt="上海交通大学">
+          <h3>上海交通大学</h3>
+          <span class="partner-type partner-type-school">大学</span>
+        </a>
       </div>
     </section>
   </main>
