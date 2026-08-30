@@ -329,8 +329,15 @@
       transition: border-color 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease, background-color 0.18s ease;
     }
     .tool-card:hover {
-      border-color: #b8c6d4;
-      transform: translateY(-2px);
+      border-color: var(--accent-2);
+      transform: translateY(-3px);
+      background: linear-gradient(145deg, #ffffff 0%, #fdf4e3 100%);
+      box-shadow: 0 12px 26px rgba(180, 83, 9, 0.12);
+    }
+    .tool-card:hover h3 { color: var(--accent-2); }
+    .tool-card:hover .badge-tool {
+      background: var(--accent-2);
+      color: #fff;
     }
     .tool-card.selected {
       border-color: var(--accent);
@@ -341,11 +348,16 @@
     .tool-card.selected h3 { color: var(--accent); }
     .tool-card.selected .badge-tool { background: var(--accent); color: #fff; }
     .tool-head { display: flex; align-items: center; gap: 12px; }
-    .badge-tool { background: var(--accent-2-soft); color: var(--accent-2); }
+    .badge-tool {
+      background: var(--accent-2-soft);
+      color: var(--accent-2);
+      transition: background 0.15s ease, color 0.15s ease;
+    }
     .tool-card h3 {
       font-size: 20px;
       color: var(--accent);
       letter-spacing: 0;
+      transition: color 0.15s ease;
     }
     .tool-card h3::after {
       content: "";
@@ -391,8 +403,20 @@
       display: flex;
       flex-direction: column;
       gap: 10px;
+      transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease, background 0.15s ease;
     }
-    .project-card h3 { font-size: 19px; }
+    .project-card:hover {
+      transform: translateY(-3px);
+      border-color: var(--accent-2);
+      box-shadow: 0 12px 26px rgba(180, 83, 9, 0.12);
+      background: linear-gradient(145deg, #ffffff 0%, #fdf4e3 100%);
+    }
+    .project-card:hover .project-period {
+      background: var(--accent-2);
+      color: #fff;
+    }
+    .project-card:hover h3 { color: var(--accent-2); }
+    .project-card h3 { font-size: 19px; transition: color 0.15s ease; }
     .project-period {
       align-self: flex-start;
       padding: 3px 10px;
@@ -401,6 +425,7 @@
       color: var(--accent-2);
       font-size: 12px;
       font-weight: 600;
+      transition: background 0.15s ease, color 0.15s ease;
     }
     .project-role { color: var(--accent); font-size: 14px; font-weight: 600; }
     .project-desc { color: var(--muted); font-size: 14px; flex: 1; }
@@ -675,15 +700,19 @@
       text-decoration: none;
       color: inherit;
       cursor: pointer;
-      transition: transform 0.15s ease;
+      border: 1px solid transparent;
+      border-radius: 12px;
+      transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease, background 0.15s ease;
     }
     .partner-card:hover {
       transform: translateY(-3px);
       text-decoration: none;
-      background: #fdeedb;
-      border-radius: 12px;
-      box-shadow: 0 10px 22px rgba(15, 23, 42, 0.08);
+      background: linear-gradient(145deg, #ffffff 0%, #fdeedb 100%);
+      border-color: var(--accent-2);
+      box-shadow: 0 12px 26px rgba(180, 83, 9, 0.12);
     }
+    .partner-card h3 { transition: color 0.15s ease; }
+    .partner-card:hover h3 { color: var(--accent-2); }
     .partner-card img {
       width: 180px;
       max-width: 100%;
@@ -699,7 +728,9 @@
       font-size: 12px;
       font-weight: 600;
       line-height: 1.4;
+      transition: transform 0.15s ease;
     }
+    .partner-card:hover .partner-type { transform: scale(1.05); }
     .partner-type-school { background: #eaf1fc; color: #1d4ed8; border: 1px solid #c9d9f5; }
     .partner-type-hospital { background: #e7f6f2; color: #0e7c6b; border: 1px solid #bfe3da; }
 
